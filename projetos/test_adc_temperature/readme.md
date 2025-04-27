@@ -101,12 +101,6 @@ Projeto de testes para conversão de ADC em temperatura utilizando Raspberry Pi 
 
 ---
 
-## 🧠 Autor
-
-- **Seu Nome** – [Perfil GitHub ou LinkedIn se quiser colocar]
-
----
-
 # 🛠️ TODOs futuros
 
 - [ ] Automatizar o clone da Unity apenas na build de testes.
