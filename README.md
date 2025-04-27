@@ -1,4 +1,3 @@
-
 # Projetos de Sistemas Embarcados - EmbarcaTech 2025
 
 Autor: Gabriel da Conceição Miranda
@@ -22,31 +21,17 @@ Cada projeto tem sua própria pasta, contendo o código-fonte, documentação e 
 
 | Projeto | Descrição |
 |---------|-----------|
-| [Music app](./projetos/music_app/) | Aplicativo educativo para uso didático dos recursos de hardware da BitDogLab |
-| [Coop music app](./projetos/sintetizador_som/) | Expansão do projeto Music app para o uso simultâneo de duas placas BitDogLab |
-
----
-
-##  Diário de Bordo (Reflexões e Aprendizados)
-
-Ao longo do curso, esta seção será atualizada com os principais aprendizados, desafios enfrentados e soluções encontradas por cada participante. Esta prática ajuda a documentar a jornada de desenvolvimento e facilita a revisão futura.
-
-### Semana 1
-
-- Apresentação da segunda fase do programa Embarcatech: Plano de ensino, localidade, horários de monitoria e aulas...
-
-### Semana 2
-
-- Apresentação dos projetos finais referentes a fase 1 do programa. Conhecer o projeto dos colegas e apresentar o meu. Troca de informações e ideias.
-
-### Semana 3
-
-- Introdução ao sistema de versionamento Git e GitHub. Elaboração deste repositório para armazenamento e controle de versão dos projetos desenvolvidos no programa
+| [music_app](./music_app/) | Aplicativo educativo para uso didático dos recursos de hardware da BitDogLab |
+| [coop_music_app](./coop_music_app/) | Expansão do projeto Music app para o uso simultâneo de duas placas BitDogLab |
+| [galton](./galton/) | Digital twin do experimento de Galton utilizando BitDogLab |
+| [irq_btns_count](./irq_btns_count/) | Implementação de botões com interrupções e correção de bouncing |
+| [modular_picow_blink](./modular_picow_blink/) | Exemplo de implementação modular de projeto com drivers para Raspberry Pi Pico W |
+| [reading_joystick](./reading_joystick/) | Leitor de posição do joystick com conversão ADC |
+| [reading_temp](./reading_temp/) | Leitor de temperatura interna do processador com conversão ADC |
+| [test_adc_temperature](./test_adc_temperature/) | Exemplo de uso de testes unitários (Unity) para validação de projeto |
 
 ---
 
 ## Licença
 
 MIT License ou GPL-3.0
-
-
