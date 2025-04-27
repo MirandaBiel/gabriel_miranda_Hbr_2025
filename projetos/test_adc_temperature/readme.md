@@ -109,10 +109,4 @@ Projeto de testes para conversão de ADC em temperatura utilizando Raspberry Pi 
 
 ---
 
-# 📸 Imagem ilustrativa (opcional)
-
-> *(Aqui você poderia colocar, se quiser depois, um fluxograma ou esquema do projeto!)*
-
----
-
 
