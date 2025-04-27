@@ -1,0 +1,97 @@
+📜 Passo a passo para configurar testes Unity no PC para projeto da Raspberry Pi Pico
+🎯 Objetivo
+Rodar os testes unitários (tests) usando Unity diretamente no Windows (no PC), gerando um executável .exe, sem precisar carregar firmware na Pico.
+
+📂 Organização de pastas
+No projeto, crie duas pastas separadas de build:
+
+build/ ➔ Para gerar firmware .uf2 da Pico.
+
+build-host/ ➔ Para compilar testes no seu PC (Windows/Linux).
+
+Por que?
+Separar os ambientes evita conflitos de toolchain:
+
+Pico usa compilador ARM (cross-compile).
+
+PC usa compilador nativo (gcc ou clang).
+
+🛠️ Configuração do CMakeLists.txt
+Foi adicionado ao CMakeLists.txt a lógica:
+
+cmake
+Copiar
+Editar
+if (CMAKE_SYSTEM_NAME STREQUAL "Windows" OR CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    set(BUILDING_FOR_HOST TRUE)
+else()
+    set(BUILDING_FOR_HOST FALSE)
+endif()
+Assim o CMake sabe quando está configurando para:
+
+🖥️ PC (Windows/Linux) ➔ testes (tests.exe)
+
+🛜 Pico (ARM Cortex-M0+) ➔ firmware (.uf2)
+
+🏗️ Instruções para construir os testes no PC
+Apague a pasta build-host/ se ela já existir:
+
+powershell
+Copiar
+Editar
+Remove-Item -Recurse -Force .\build-host\
+Crie a pasta de build novamente:
+
+powershell
+Copiar
+Editar
+mkdir build-host
+cd build-host
+Rode o cmake especificando o gerador do MinGW:
+
+powershell
+Copiar
+Editar
+cmake .. -G "MinGW Makefiles"
+📌 Por que usar MinGW Makefiles?
+Porque o gerador padrão (NMake Makefiles) exige ambiente configurado (Developer Command Prompt do Visual Studio).
+MinGW é mais leve e já funciona no PowerShell se estiver no PATH.
+
+Compile o projeto tests:
+
+powershell
+Copiar
+Editar
+cmake --build . --target tests
+Execute o binário de testes:
+
+powershell
+Copiar
+Editar
+.\tests.exe
+📌 Importante:
+Antes de executar, verifique que o terminal reconhece o MinGW (gcc --version).
+
+⚡ Erros comuns e soluções
+
+Erro	Causa	Solução
+Error: generator does not match previously used	Tentou mudar o tipo de build sem limpar	Apagar CMakeCache.txt ou a pasta inteira
+CMAKE_C_COMPILER not set	Não encontrou compilador nativo	Instalar MinGW ou abrir Developer Command Prompt
+Nada aparece no terminal	Programa termina rápido	Adicionar sleep_ms(5000) ou while(true) no final dos testes
+🧠 Resumo geral
+Firmware e testes precisam de toolchains diferentes.
+
+Testes no PC precisam ser configurados como projetos nativos no CMake.
+
+Separar pastas evita misturar builds (build/ para Pico, build-host/ para PC).
+
+Usar o MinGW facilita compilar testes no Windows sem dependências pesadas.
+
+✅ Resultado
+Agora é possível:
+
+Compilar e rodar testes Unity rapidamente no PC.
+
+Compilar o firmware .uf2 separado para enviar à Raspberry Pi Pico.
+
+Manter o projeto organizado e multiplataforma.

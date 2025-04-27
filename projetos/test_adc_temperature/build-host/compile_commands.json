@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/gmira/Documents/EmbarcaTech/pico_programs/test_adc_temperature/build-host",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe  @CMakeFiles/tests.dir/includes_C.rsp -std=gnu11 -o CMakeFiles\\tests.dir\\tests\\test_adc_to_celsius.c.obj -c C:\\Users\\gmira\\Documents\\EmbarcaTech\\pico_programs\\test_adc_temperature\\tests\\test_adc_to_celsius.c",
+  "file": "C:/Users/gmira/Documents/EmbarcaTech/pico_programs/test_adc_temperature/tests/test_adc_to_celsius.c",
+  "output": "CMakeFiles/tests.dir/tests/test_adc_to_celsius.c.obj"
+},
+{
+  "directory": "C:/Users/gmira/Documents/EmbarcaTech/pico_programs/test_adc_temperature/build-host",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe  @CMakeFiles/tests.dir/includes_C.rsp -std=gnu11 -o CMakeFiles\\tests.dir\\src\\adc_to_celsius.c.obj -c C:\\Users\\gmira\\Documents\\EmbarcaTech\\pico_programs\\test_adc_temperature\\src\\adc_to_celsius.c",
+  "file": "C:/Users/gmira/Documents/EmbarcaTech/pico_programs/test_adc_temperature/src/adc_to_celsius.c",
+  "output": "CMakeFiles/tests.dir/src/adc_to_celsius.c.obj"
+},
+{
+  "directory": "C:/Users/gmira/Documents/EmbarcaTech/pico_programs/test_adc_temperature/build-host",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe  @CMakeFiles/tests.dir/includes_C.rsp -std=gnu11 -o CMakeFiles\\tests.dir\\lib\\unity\\src\\unity.c.obj -c C:\\Users\\gmira\\Documents\\EmbarcaTech\\pico_programs\\test_adc_temperature\\lib\\unity\\src\\unity.c",
+  "file": "C:/Users/gmira/Documents/EmbarcaTech/pico_programs/test_adc_temperature/lib/unity/src/unity.c",
+  "output": "CMakeFiles/tests.dir/lib/unity/src/unity.c.obj"
+}
+]

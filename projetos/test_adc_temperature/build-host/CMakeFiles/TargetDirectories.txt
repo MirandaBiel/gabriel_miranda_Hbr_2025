@@ -1,0 +1,3 @@
+C:/Users/gmira/Documents/EmbarcaTech/pico_programs/test_adc_temperature/build-host/CMakeFiles/tests.dir
+C:/Users/gmira/Documents/EmbarcaTech/pico_programs/test_adc_temperature/build-host/CMakeFiles/edit_cache.dir
+C:/Users/gmira/Documents/EmbarcaTech/pico_programs/test_adc_temperature/build-host/CMakeFiles/rebuild_cache.dir
